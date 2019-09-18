@@ -1,0 +1,55 @@
+.data-label{
+    display: flex;
+    flex-direction: column;
+}
+.input-div{
+    display: flex;
+    flex-direction: column;
+    background:#fff;
+    border-radius: 15px;
+    height:100%;
+    padding:20px;
+}
+.input-div form .input-div-details{
+    display: flex;
+    flex-direction: column;
+}
+.input-div form label{
+    color:#000;
+}
+.input-div form .input-div-details input{
+    color:#000;
+}
+.input-div form button{
+    margin-top:10px;
+    color:#000;
+    border-radius:5px;
+}
+
+.fetched-div{
+    display: flex;
+    flex-direction: column;
+    background:grey;
+    border-radius: 15px;
+    height:100%;
+    padding:20px;
+    margin-top:10px;
+    margin-bottom:10px;
+}
+.fetched-div table tr{
+    text-align: left;
+}
+.fetched-div table tr td .edit{
+    background:green;
+    border:none;
+    border-radius: 5px;
+    padding:5px 20px;
+    outline: none;
+}
+.fetched-div table tr td .delete{
+    background:red;
+    border:none;
+    border-radius: 5px;
+    padding:5px 20px;
+    outline: none;
+}

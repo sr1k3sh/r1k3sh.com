@@ -1,0 +1,171 @@
+
+@import url('https://fonts.googleapis.com/css?family=Gloria+Hallelujah&display=swap');
+body {
+  background: radial-gradient(center, ellipse cover, #ffffff 0%, #f2efd9 100%);
+}
+@font-face {
+    font-family: SkyfontRegular;
+    src: url("./Skyfont-NonCommercial.otf") format("opentype");
+}
+@media only screen and (max-width: 768px) {
+#Layer_1{
+  width:100%;
+}  
+}
+@media (min-width:768px){
+
+  #Layer_1{
+    width:50%;
+  }
+}
+#loader{
+  background: #fff;
+}
+#click-me{
+ cursor: pointer;
+}
+.st0{fill:#F15C27;}
+	.st1{fill:#FFFFFF;}
+	.st2{fill:#E2324B;}
+	.st3{fill:#62381B;}
+	.st4{fill:#2D948D;}
+	.st5{fill:#E8D320;}
+	.st6{fill:#69C8C3;}
+	.st7{fill:#E64534;}
+	.st8{fill:#A0BF3B;}
+	.st9{fill:#54777B;}
+	.st10{fill:#EE7D8F;}
+	.st11{font-family:'SkyfontRegular';}
+	.st12{font-size:28.7926px;}
+@keyframes rotate-right {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+@keyframes rotate-left {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(-360deg);
+  }
+}
+@keyframes hover {
+  0% {
+    transform: translateY(0%);
+  }
+  50% {
+    transform: translateY(5%);
+  }
+  100% {
+    transform: translateY(0%);
+  }
+}
+@keyframes pull {
+  0% {
+    transform: scaleY(1);
+  }
+  40% {
+    transform: scaleY(1.01);
+  }
+  60% {
+    transform: scaleY(0.99);
+  }
+  80% {
+    transform: scaleY(1.01);
+  }
+  100% {
+    transform: scaleY(0.99);
+  }
+  80% {
+    transform: scaleY(1.01);
+  }
+  100% {
+    transform: scaleY(1);
+  }
+}
+#airplane2, #airplane1 {
+  transform: translate3d(0, 0, 0);
+  transform-origin: 200px 200px;
+  transform: translate3d(0, 0, 0);
+  animation: rotate-right 60s linear 0s infinite;
+}
+
+#countryObjects {
+  transform: translate3d(0, 0, 0);
+  transform-origin: 200px 200px;
+  transform: translate3d(0, 0, 0);
+  animation: rotate-right 240s linear 0s infinite;
+}
+
+#floatingGlobe {
+  transform: translate3d(0, 0, 0);
+  transform-origin: 200px 200px;
+  transform: translate3d(0, 0, 0);
+  animation: rotate-left 360s linear 0s infinite;
+}
+
+#globe {
+  transform: translate3d(0, 0, 0);
+  animation: hover 0s linear 0s infinite;
+}
+
+#windmill {
+  transform: translate3d(0, 0, 0);
+  transform-origin: 331px 201px;
+  transform: translate3d(0, 0, 0);
+  animation: rotate-right 2s linear 0s infinite;
+}
+
+#cloud1 {
+  transform: translate3d(0, 0, 0);
+  animation: hover 3s linear 1s infinite;
+}
+
+#cloud2 {
+  transform: translate3d(0, 0, 0);
+  animation: hover 3s linear 2s infinite;
+}
+
+#cloud3 {
+  transform: translate3d(0, 0, 0);
+  animation: hover 3s linear 3s infinite;
+}
+
+#circle1 {
+  transform: translate3d(0, 0, 0);
+  transform-origin: 200px 200px;
+  transform: translate3d(0, 0, 0);
+  animation: rotate-right 12s linear 0s infinite;
+}
+
+#circle2 {
+  transform: translate3d(0, 0, 0);
+  transform-origin: 200px 200px;
+  transform: translate3d(0, 0, 0);
+  animation: rotate-left 24s linear 0s infinite;
+}
+
+#circle3 {
+  transform: translate3d(0, 0, 0);
+  transform-origin: 200px 200px;
+  transform: translate3d(0, 0, 0);
+  animation: rotate-right 12s linear 0s infinite;
+}
+
+#circle4 {
+  transform: translate3d(0, 0, 0);
+  transform-origin: 200px 200px;
+  transform: translate3d(0, 0, 0);
+  animation: rotate-left 24s linear 0s infinite;
+}
+
+#circle5 {
+  transform: translate3d(0, 0, 0);
+  transform-origin: 200px 200px;
+  transform: translate3d(0, 0, 0);
+  animation: rotate-right 12s linear 0s infinite;
+}

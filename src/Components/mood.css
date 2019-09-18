@@ -1,0 +1,138 @@
+.jla-headline {
+  color: #fff;
+  font-size: 45px;
+  padding: 20px 0 20px 0;
+  font-family: 'Amatic SC', cursive;
+}
+
+/* .h2 {
+  font-family: 'Poiret One', cursive;
+  font-size: 20px;
+  color: #fff;
+} */
+
+/* Buttons */
+.jla-button-mood {
+  transition: ease-in-out 300ms;
+  background-color: transparent;
+  border: 2px solid #fff;
+  color: #fff;
+  padding: 20px 50px;
+  margin: 0 5px;
+  cursor: pointer;
+}
+.jla-button-mood:hover {
+  background-color: #fff;
+  color: #000;
+}
+
+/* Smiley */
+.smiley {
+  background: transparent;
+  border: 3px solid #fff;
+  border-radius: 100%;
+  padding: 25px;
+  position: relative;
+  width: 100px;
+  height: 100px;
+}
+
+.mouth {
+  width: 58%;
+  height: 25%;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+  border-bottom-left-radius: 100px;
+  border-bottom-right-radius: 100px;
+  position: absolute;
+  bottom: 16%;
+  left: 50%;
+  margin-left: -31%;
+  background: #fff;
+  border: 3px solid #fff;
+  transition: all 300ms cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+
+.eyes {
+  width: 100%;
+  margin-top: 15%;
+  box-sizing: border-box;
+  padding: 0 5px;
+  transition: all 300ms cubic-bezier(0.645, 0.045, 0.355, 1);
+  display: flex;
+  justify-content: space-between;
+}
+
+.eyes .eye {
+  width: 20px;
+  height: 20px;
+  background: #fff;
+  border: 3px solid #fff;
+  border-radius: 100%;
+  position: relative;
+}
+.eyes .eye:after {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 0%;
+  height: 0%;
+  background: #09243a;
+  transform: rotate(0deg);
+  top: -15px;
+  left: 12px;
+  transition: all 300ms cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+.eyes .eye:first-of-type:after {
+  transform: rotate(0deg);
+  left: auto;
+  right: 8px;
+}
+
+.hier-der-smileeey {
+  height: 250px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+.hier-der-smileeey.neutral .eyes {
+  margin-top: 20%;
+}
+.hier-der-smileeey.neutral .mouth {
+  border-top-left-radius: 100px;
+  border-top-right-radius: 100px;
+  border-bottom-left-radius: 100px;
+  height: 10%;
+  width: 40%;
+  bottom: 25%;
+  margin-left: -20%;
+}
+.hier-der-smileeey.angry .eyes {
+  margin-top: 30%;
+}
+.hier-der-smileeey.angry .eye:first-of-type:after {
+  transform: rotate(35deg);
+  left: auto;
+  right: -8px;
+}
+.hier-der-smileeey.angry .eye:after {
+  width: 120%;
+  height: 50%;
+  transform: rotate(-35deg);
+  top: -3px;
+  left: -8px;
+  border-radius: 0;
+}
+.hier-der-smileeey.angry .mouth {
+  width: 40%;
+  height: 20%;
+  border-top-left-radius: 100%;
+  border-top-right-radius: 100%;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  bottom: 18%;
+  left: 50%;
+  margin-left: -20%;
+  border-bottom: 0;
+}

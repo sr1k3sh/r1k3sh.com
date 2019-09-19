@@ -78,14 +78,14 @@ export default class FirstPage extends Component {
           value: data,
           currently:data.currently,
           temperature: data.currently.temperature +' °F',
-          icon:data.currently.icon.toUpperCase(),
+          icon: data.currently.icon.toUpperCase().replace(new RegExp("-", "g"), "_"),
         },_=>{
           that.setState({
 
             isLoaded: true
           })
         })
-        console.log(that.state.value)
+        console.log(that.state.icon.replace(new RegExp("-", "g"), "_"))
         // $.each(data, function (key, val) {
         // });
 
@@ -174,7 +174,7 @@ export default class FirstPage extends Component {
       <div className="welcome-text">
         <h1>Hello!!</h1>
         <div className="welcome-details">
-          <p className="drop-cap">I'm rikesh Shrestha working as a web and mobile developer,Also tech-enthusiast like to update in future technology.</p>
+          <p>I'm rikesh Shrestha working as a web and mobile developer,Also tech-enthusiast like to update in future technology.</p>
         </div>
       </div>
       <div className="main-image">

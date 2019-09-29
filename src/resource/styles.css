@@ -1,7 +1,7 @@
 
 
 .main {
-    position: relative;
+    position: absolute;
     width: 100%;
     height: 100%;
     color: #fff8de;
@@ -111,10 +111,10 @@ a.bottom-right {
     right: 60px;
 }
 
-canvas {
+.homeCanvas{
     width: 100%;
     height: 100%;
-    position: absolute;
+    position: absolute !important;
     top: 0;
     overflow: hidden;
 }

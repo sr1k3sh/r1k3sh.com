@@ -1,9 +1,6 @@
-import React, { useState, useEffect, Component } from 'react'
+import React, {Component } from 'react'
 // A React renderer for Three-js: https://github.com/drcmda/react-three-fiber
-import { Canvas } from 'react-three-fiber'
-// A React x-platform animation library: https://github.com/react-spring/react-spring
-import { useTransition, useSpring, a } from 'react-spring/three'
-import { svgs, colors, deg, doubleSide } from './../resource/helpers'
+
 import './firstpage.css'
 import $ from 'jquery'
 import ReactAnimatedWeather from 'react-animated-weather';
@@ -12,31 +9,7 @@ import Clock from 'react-live-clock';
 
 
 /** This component sets up a background plane and transitions a group of shapes */
-function Scene() {
-  const [page, setPage] = useState(0)
-  const [shapes, setShapes] = useState([])
-  // Switches scenes every 4 seconds
-  useEffect(() => void setInterval(() => setPage(i => (i + 1) % svgs.length), 5000), [])
-  // Converts current SVG into mesh-shapes: https://threejs.org/docs/index.html#examples/loaders/SVGLoader
-  useEffect(() => void svgs[page].then(setShapes), [page])
-  // This spring controls the background color animation
-  const { color } = useSpring({ color: colors[page] })
-  // This one is like a transition group, but instead of handling div's it mounts/unmounts meshes in a fancy way
- 
-  return (
-    <>
-      <mesh scale={[20000, 20000, 1]} rotation={[0, deg(-10), 0]}>
-        <planeGeometry attach="geometry" args={[1, 1]} />
-        <a.meshPhongMaterial attach="material" color={color} depthTest={false} />
-      </mesh>
-      {/* <group position={[1600, -700, page]} rotation={[0, deg(180), 0]}>
-        {transitions.map(({ item, key, props }) => (
-          <Shape key={key} {...item} {...props} />
-        ))}
-      </group> */}
-    </>
-  )
-}
+
 
 /** Main component */
 export default class FirstPage extends Component {
@@ -143,49 +116,80 @@ export default class FirstPage extends Component {
     setTimeout(_=>{
       $('.weather .weather-container .weather-field').css({
         'opacity': '1',
-        'animation': 'loading 2s ease-in forwards'
+        'animation': 'loading 0.7s ease-in forwards'
       })
-      $('.welcome-text h1').css({
+      $('.welcome-text .slogan h1#slogan1').css({
         'opacity':'1',
-        'animation':'loading 2s ease-in forwards'})
+        'animation':'loading 0.7s ease-in forwards'})
         setTimeout(_=>{
-          $('.welcome-text p,.main .welcome-text .welcome-details').css({
+          $('.welcome-text .slogan h1#slogan2').css({
             'opacity': '1',
-            'animation': 'loading 2s ease-in forwards'
-          })
+            'animation': 'loading 0.7s ease-in forwards'
+          })          
           setTimeout(_=>{
-            $('.main img').css({
+            $('.welcome-text .slogan h1#slogan3').css({
               'opacity': '1',
-              'animation': 'loading 2s ease-in forwards'
-            })
-          },2000)
-        },2000)
-    },2000)
+              'animation': 'loading 0.7s ease-in forwards'
+            })   
+            setTimeout(_ => {
+              $('.welcome-text .slogan h1#slogan4').css({
+                'opacity': '1',
+                'animation': 'loading 0.7s ease-in forwards'
+              })
+              setTimeout(_ => {
+                $('.welcome-text .slogan h1#slogan5').css({
+                  'opacity': '1',
+                  'animation': 'loading 0.7s ease-in forwards'
+                })
+                setTimeout(_ => {
+                  $('.main img').css({
+                    'opacity': '1',
+                    'animation': 'loading 0.7s ease-in forwards'
+                  })
+                }, 900) 
+              }, 900)   
+            },900)     
+          },900)
+        },900)
+    },900)
   }
   render() {
 
   return (
     <div className="main">
-      <Canvas className="homeCanvas" invalidateFrameloop camera={{ fov: 90, position: [0, 0, 1800], rotation: [0, deg(-20), deg(180)], near: 0.1, far: 20000 }}>
-        <ambientLight intensity={0.5} />
-        <spotLight intensity={0.5} position={[300, 300, 4000]} />
-        <Scene />
-      </Canvas>
-      <div className="welcome-text">
-        <h1>Hello!!</h1>
-        <div className="welcome-details">
-          <p>I'm rikesh Shrestha working as a web and mobile developer,Also tech-enthusiast like to update in future technology.</p>
-        </div>
-      </div>
-      <div className="main-image">
-      
-        <img src="./images/test.png" alt='main'></img>
-      </div>
-      <div className="weather" style={{display:'flex',justifyContent:'center',alignItems:'center',position:'absolute',top:'10%',left:'5%',width:'220px'}}>
-
-        {this.loadResourse()}
+     
+      <div className="home-page-container">
+        <div className="home-page-left">
         
-        {/* <MoodCheck /> */}
+          <div className="weather" style={{display:'flex',flexDirection:'column',justifyContent:'center',alignItems:'center',height:'100vh',width:'220px'}}>
+           
+            {this.loadResourse()}
+          </div>
+         
+          <div className="welcome-text">
+            <div className="slogan">
+              <h1 id="slogan1">I EAT</h1>
+              <h1 id="slogan2">CODE</h1>
+              <h1 id="slogan3">SLEEP</h1>
+              <h1 id="slogan4">&#38;</h1>
+              <h1 id="slogan5">REPEAT</h1>
+            </div> 
+            <div>
+              <p><span>What I do?</span></p>
+            </div>
+            {/* <div className="welcome-details">
+              <p>I'm Rikesh Shrestha working as a web and mobile developer, Also tech-enthusiast like to update in future technology.</p>
+            </div> */}
+          </div>
+        </div>
+          <div className="main-image">
+          {/* <div style={{ textAlign: 'left', position: 'absolute', top: '0%' }}>
+            <h1>Hello</h1>
+            <h2>I'm Rikesh</h2>
+            <h3>I'm a Web and Mobile developer</h3>
+          </div> */}
+            <img src="./images/test.png" alt='main'></img>
+          </div>
       </div>
     </div>
   )

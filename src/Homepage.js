@@ -1,5 +1,7 @@
 import React, { Component } from 'react'
 import FirstPage  from './Components/FirstPage';
+import './homepage.css';
+import $ from 'jquery';
 
 export default class Homepage extends Component {
     constructor(props){
@@ -7,22 +9,22 @@ export default class Homepage extends Component {
         this.props=props
        
     }
-    
-    componentWillReceiveProps(props){
-        const that = this
-        setTimeout(function(){
-            // that.props=props;
-
-            // that.setState({
-            //     showFirstPage:props.loaderIsHidden
-            // })
-        },100)
-    }
+    componentDidMount(){
+        $('#about-nav').click(_=>{
+            $('.main-image').fadeOut('fast',_=>{
+                $('.main-image').remove()
+            })
+            
+        })
+      
+}    
     render() {
         console.log(this.props)
         return (
-            <div className='home' style={{background:'#000',height:'100%'}}>
-                {this.props.loaderIsHidden? <FirstPage></FirstPage>:''}
+            <div className="homepage">
+                
+                <FirstPage/>
+                
             </div>
         )
     }

@@ -57,9 +57,9 @@ export default class NavBar extends Component {
 
     }
     render() {
-        let currentPath = window.location.pathname;
-         currentPath = currentPath.replace(/\//g, '')
-        console.log(currentPath)
+        // let currentPath = window.location.pathname;
+        //  currentPath = currentPath.replace(/\//g, '')
+       
         
         return (
             <div style = {

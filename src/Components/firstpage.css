@@ -1,4 +1,28 @@
-
+.main .home-page-container{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    position: absolute;
+    top:0;
+    left: 0;
+    right:0;
+    bottom: 0;
+}
+.main .home-page-container .main-image{
+    grid-column: 2;
+}
+.main .home-page-container .main-image img{  
+    z-index: 1;
+    opacity:0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+ }
+ .main .home-page-container .home-page-left{
+     grid-column:1;
+     display: grid;
+     grid-template-columns: auto 1fr;
+     grid-gap:30px;
+ }
 .weather-container .weather-icon canvas{
     width:100%;
     
@@ -7,9 +31,10 @@
  .weather{
      backdrop-filter: blur(20px);
     background: #faebd75c;
-    border-radius: 12px;
+    /* border-radius: 12px; */
     padding:10px;
     animation: loading 1s ease-in-out forwards;
+     grid-column:1;
    
  }
  .weather span{
@@ -27,8 +52,7 @@ animation: loading 1s ease-in-out forwards;
          opacity:1
      }
  }
- .weather-container .weather-field{
-     position:relative;
+ .weather-container .weather-field{   
      display: flex;
      flex-direction: column;
      justify-content: center;
@@ -38,22 +62,26 @@ animation: loading 1s ease-in-out forwards;
      line-height: 0;
  }
  .main .welcome-text{
-     display: flex;
+     
      flex-direction: column;
-     position: absolute;
-     top: 26.1%;
-    left: 17%;
-     justify-content: center;
-     align-items: left;
+      grid-column:2;
+      display: flex;
+    justify-content: center;
+    height: 100vh;
+    
  }
- .main .welcome-text h1{
+ .main .welcome-text .slogan{
+     padding:10px;
+ }
+ .main .welcome-text .slogan h1{
      font-size:7.5em;
      font-weight:bolder;
      opacity:0;
-     line-height: 0;
+     line-height: 0.5;
+     text-transform: capitalize;
     }
     .main .welcome-text p{
-        opacity:0;
+        /* opacity:0; */
         font-weight: 100;
         float:right;
         text-align: justify;
@@ -72,13 +100,7 @@ animation: loading 1s ease-in-out forwards;
     width:300px;
     opacity: 0;
 }
- .main img{
-    position: absolute;
-    top: 0%;
-    right: 0%;
-    z-index: 1;
-    opacity:0;
- }
+ 
  /*spinner*/
  .spinner{
   position: relative;
@@ -106,4 +128,27 @@ animation: loading 1s ease-in-out forwards;
     transform: rotate(360deg);
     box-shadow: inset -2px 0 0 3px #cb876c;
   }
+}
+@media (max-width:1307px){
+    .main .home-page-container {
+   
+    grid-template-columns: 1fr;
+    
+}
+
+}
+@media(max-height:734px){
+    .main .welcome-text .slogan h1{
+     font-size:6.5rem;
+    }
+}
+@media(max-height:638px){
+    .main .welcome-text .slogan h1{
+     font-size:5.5rem;
+    }
+}
+@media(max-height:540px){
+    .main .welcome-text .slogan h1{
+     font-size:4.5rem;
+    }
 }

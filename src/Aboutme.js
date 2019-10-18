@@ -3,7 +3,7 @@ import './aboutme.css';
 import hoverEffect from 'hover-effect'
 import $ from 'jquery'
 import Skills from './Components/Skills'
-let imageUrl1, imageUrl2,l1;
+let imageUrl1, imageUrl2
 let url="./images/alphabets"
 let letters = {
     'first': [`${url}/r.png`, `${url}/i.png`, `${url}/k.png`, `${url}/e.png`, `${url}/s.png`, `${url}/h.png`],
@@ -27,7 +27,7 @@ export default class Aboutme extends Component {
        
         imageUrl1 = "https://upload.wikimedia.org/wikipedia/commons/3/30/Echo_Park_Lake_with_Downtown_Los_Angeles_Skyline.jpg"
         imageUrl2 = "https://images.unsplash.com/photo-1440330033336-7dcff4630cef?ixlib=rb-1.2.1&auto=format&fit=crop&w=1342&q=80"
-        l1 = "./images/alphabets/r.png"
+       
         let that = this
 
         $.ajax({

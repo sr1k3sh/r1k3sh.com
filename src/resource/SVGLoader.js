@@ -48,6 +48,7 @@ SVGLoader.prototype = {
 
             var path = null
 
+            // eslint-disable-next-line default-case
             switch (node.nodeName) {
                 case 'svg':
                     break
@@ -137,6 +138,7 @@ SVGLoader.prototype = {
                     isFirstPoint = false
                 }
 
+                // eslint-disable-next-line default-case
                 switch(type) {
                     case 'M':
                         var numbers = parseFloats(data)
@@ -155,8 +157,8 @@ SVGLoader.prototype = {
                         break
 
                     case 'H':
-                        var numbers = parseFloats(data)
-                        for (var j = 0, jl = numbers.length; j < jl; j++) {
+                         numbers = parseFloats(data)
+                        for (j = 0, jl = numbers.length; j < jl; j++) {
                             point.x = numbers[j]
                             control.x = point.x
                             control.y = point.y
@@ -166,8 +168,8 @@ SVGLoader.prototype = {
                         break
 
                     case 'V':
-                        var numbers = parseFloats(data)
-                        for (var j = 0, jl = numbers.length; j < jl; j++) {
+                        numbers = parseFloats(data)
+                        for (j = 0, jl = numbers.length; j < jl; j++) {
                             point.y = numbers[j]
                             control.x = point.x
                             control.y = point.y
@@ -177,8 +179,8 @@ SVGLoader.prototype = {
                         break
 
                     case 'L':
-                        var numbers = parseFloats(data)
-                        for (var j = 0, jl = numbers.length; j < jl; j += 2) {
+                        numbers = parseFloats(data)
+                        for (j = 0, jl = numbers.length; j < jl; j += 2) {
                             point.x = numbers[j + 0]
                             point.y = numbers[j + 1]
                             control.x = point.x
@@ -189,8 +191,8 @@ SVGLoader.prototype = {
                         break
 
                     case 'C':
-                        var numbers = parseFloats(data)
-                        for (var j = 0, jl = numbers.length; j < jl; j += 6) {
+                        numbers = parseFloats(data)
+                        for (j = 0, jl = numbers.length; j < jl; j += 6) {
                             path.bezierCurveTo(numbers[j + 0], numbers[j + 1], numbers[j + 2], numbers[j + 3], numbers[j + 4], numbers[j + 5])
                             control.x = numbers[j + 2]
                             control.y = numbers[j + 3]
@@ -201,8 +203,8 @@ SVGLoader.prototype = {
                         break
 
                     case 'S':
-                        var numbers = parseFloats(data)
-                        for (var j = 0, jl = numbers.length; j < jl; j += 4) {
+                        numbers = parseFloats(data)
+                        for (j = 0, jl = numbers.length; j < jl; j += 4) {
                             path.bezierCurveTo(
                                 getReflection(point.x, control.x),
                                 getReflection(point.y, control.y),
@@ -220,8 +222,8 @@ SVGLoader.prototype = {
                         break
 
                     case 'Q':
-                        var numbers = parseFloats(data)
-                        for (var j = 0, jl = numbers.length; j < jl; j += 4) {
+                        numbers = parseFloats(data)
+                        for (j = 0, jl = numbers.length; j < jl; j += 4) {
                             path.quadraticCurveTo(numbers[j + 0], numbers[j + 1], numbers[j + 2], numbers[j + 3])
                             control.x = numbers[j + 0]
                             control.y = numbers[j + 1]
@@ -232,8 +234,8 @@ SVGLoader.prototype = {
                         break
 
                     case 'T':
-                        var numbers = parseFloats(data)
-                        for (var j = 0, jl = numbers.length; j < jl; j += 2) {
+                     numbers = parseFloats(data)
+                        for (j = 0, jl = numbers.length; j < jl; j += 2) {
                             var rx = getReflection(point.x, control.x)
                             var ry = getReflection(point.y, control.y)
                             path.quadraticCurveTo(rx, ry, numbers[j + 0], numbers[j + 1])
@@ -246,8 +248,8 @@ SVGLoader.prototype = {
                         break
 
                     case 'A':
-                        var numbers = parseFloats(data)
-                        for (var j = 0, jl = numbers.length; j < jl; j += 7) {
+                        numbers = parseFloats(data)
+                        for (j = 0, jl = numbers.length; j < jl; j += 7) {
                             var start = point.clone()
                             point.x = numbers[j + 5]
                             point.y = numbers[j + 6]
@@ -261,8 +263,8 @@ SVGLoader.prototype = {
                         //
 
                     case 'm':
-                        var numbers = parseFloats(data)
-                        for (var j = 0, jl = numbers.length; j < jl; j += 2) {
+                        numbers = parseFloats(data)
+                        for (j = 0, jl = numbers.length; j < jl; j += 2) {
                             point.x += numbers[j + 0]
                             point.y += numbers[j + 1]
                             control.x = point.x
@@ -277,8 +279,8 @@ SVGLoader.prototype = {
                         break
 
                     case 'h':
-                        var numbers = parseFloats(data)
-                        for (var j = 0, jl = numbers.length; j < jl; j++) {
+                        numbers = parseFloats(data)
+                        for (j = 0, jl = numbers.length; j < jl; j++) {
                             point.x += numbers[j]
                             control.x = point.x
                             control.y = point.y
@@ -288,8 +290,8 @@ SVGLoader.prototype = {
                         break
 
                     case 'v':
-                        var numbers = parseFloats(data)
-                        for (var j = 0, jl = numbers.length; j < jl; j++) {
+                    numbers = parseFloats(data)
+                        for (j = 0, jl = numbers.length; j < jl; j++) {
                             point.y += numbers[j]
                             control.x = point.x
                             control.y = point.y
@@ -299,8 +301,8 @@ SVGLoader.prototype = {
                         break
 
                     case 'l':
-                        var numbers = parseFloats(data)
-                        for (var j = 0, jl = numbers.length; j < jl; j += 2) {
+                        numbers = parseFloats(data)
+                        for (j = 0, jl = numbers.length; j < jl; j += 2) {
                             point.x += numbers[j + 0]
                             point.y += numbers[j + 1]
                             control.x = point.x
@@ -311,8 +313,8 @@ SVGLoader.prototype = {
                         break
 
                     case 'c':
-                        var numbers = parseFloats(data)
-                        for (var j = 0, jl = numbers.length; j < jl; j += 6) {
+                        numbers = parseFloats(data)
+                        for (j = 0, jl = numbers.length; j < jl; j += 6) {
                             path.bezierCurveTo(
                                 point.x + numbers[j + 0],
                                 point.y + numbers[j + 1],
@@ -330,8 +332,8 @@ SVGLoader.prototype = {
                         break
 
                     case 's':
-                        var numbers = parseFloats(data)
-                        for (var j = 0, jl = numbers.length; j < jl; j += 4) {
+                        numbers = parseFloats(data)
+                        for (j = 0, jl = numbers.length; j < jl; j += 4) {
                             path.bezierCurveTo(
                                 getReflection(point.x, control.x),
                                 getReflection(point.y, control.y),
@@ -349,8 +351,8 @@ SVGLoader.prototype = {
                         break
 
                     case 'q':
-                        var numbers = parseFloats(data)
-                        for (var j = 0, jl = numbers.length; j < jl; j += 4) {
+                        numbers = parseFloats(data)
+                        for (j = 0, jl = numbers.length; j < jl; j += 4) {
                             path.quadraticCurveTo(point.x + numbers[j + 0], point.y + numbers[j + 1], point.x + numbers[j + 2], point.y + numbers[j + 3])
                             control.x = point.x + numbers[j + 0]
                             control.y = point.y + numbers[j + 1]
@@ -361,9 +363,13 @@ SVGLoader.prototype = {
                         break
 
                     case 't':
+                        // eslint-disable-next-line no-redeclare
                         var numbers = parseFloats(data)
+                        // eslint-disable-next-line no-redeclare
                         for (var j = 0, jl = numbers.length; j < jl; j += 2) {
+                            // eslint-disable-next-line no-redeclare
                             var rx = getReflection(point.x, control.x)
+                            // eslint-disable-next-line no-redeclare
                             var ry = getReflection(point.y, control.y)
                             path.quadraticCurveTo(rx, ry, point.x + numbers[j + 0], point.y + numbers[j + 1])
                             control.x = rx
@@ -375,9 +381,10 @@ SVGLoader.prototype = {
                         break
 
                     case 'a':
-                        var numbers = parseFloats(data)
+                         numbers = parseFloats(data)
+                        // eslint-disable-next-line no-redeclare
                         for (var j = 0, jl = numbers.length; j < jl; j += 7) {
-                            var start = point.clone()
+                            start = point.clone()
                             point.x += numbers[j + 5]
                             point.y += numbers[j + 6]
                             control.x = point.x
@@ -523,7 +530,7 @@ SVGLoader.prototype = {
                 index++
             }
 
-            var regex = /(-?[\d\.?]+)[,|\s](-?[\d\.?]+)/g
+            var regex = /(-?[\d?]+)[,|\s](-?[\d?]+)/g
 
             var path = new ShapePath()
             path.color.setStyle(style.fill)
@@ -551,7 +558,7 @@ SVGLoader.prototype = {
                 index++
             }
 
-            var regex = /(-?[\d\.?]+)[,|\s](-?[\d\.?]+)/g
+            var regex = /(-?[\d?]+)[,|\s](-?[\d?]+)/g
 
             var path = new ShapePath()
             path.color.setStyle(style.fill)
@@ -632,7 +639,7 @@ SVGLoader.prototype = {
         }
 
         function parseFloats(string) {
-            var array = string.split(/[\s,]+|(?=\s?[+\-])/)
+            var array = string.split(/[\s,]+|(?=\s?[+])/)
 
             for (var i = 0; i < array.length; i++) {
                 var number = array[i]
@@ -690,6 +697,7 @@ SVGLoader.prototype = {
 
                     currentTransform.identity()
 
+                    // eslint-disable-next-line default-case
                     switch (transformType) {
                         case 'translate':
                             if (array.length >= 1) {
@@ -780,7 +788,7 @@ SVGLoader.prototype = {
                 v2.set(tempV3.x, tempV3.y)
             }
 
-            var isRotated = isTransformRotated(m)
+           
 
             var tempV2 = new Vector2()
             var tempV3 = new Vector3()
@@ -819,10 +827,7 @@ SVGLoader.prototype = {
             }
         }
 
-        function isTransformRotated(m) {
-            return m.elements[1] !== 0 || m.elements[3] !== 0
-        }
-
+        
         function getTransformScaleX(m) {
             var te = m.elements
             return Math.sqrt(te[0] * te[0] + te[1] * te[1])

@@ -27,7 +27,7 @@ export default class FirstPage extends Component {
     }
   }
   componentWillMount() {
-    let that = this
+  
     if (navigator.geolocation && !this.state.isLoaded) {
       // Call getCurrentPosition with success and failure callbacks
       navigator.geolocation.getCurrentPosition(this.success, this.fail);

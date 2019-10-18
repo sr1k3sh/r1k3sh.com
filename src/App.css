@@ -1,5 +1,5 @@
 body{
-  background: #000;
+  background: #868686;
   margin:0;
   padding:0;
   box-sizing: border-box;
@@ -359,3 +359,24 @@ template {
 [hidden] {
   display: none;
 }
+
+
+
+            .st0{fill:#FFFFFF;}
+            .st1{fill:#2B2E31;} 
+            .st2{fill:#D9DAD9;}
+            .st3{opacity:0.3;}
+            .st4{fill:#660A0C;}
+            .st5{opacity:0.4;}
+            .st6{fill:#CF6058;}
+            .st7{opacity:0.2;}
+            .st8{fill:#16191C;}
+            .st9{opacity:0.5;}
+     @keyframes bearanimate{
+       from {
+         opacity:0
+       }
+       to{
+         opacity:1
+       }
+     }

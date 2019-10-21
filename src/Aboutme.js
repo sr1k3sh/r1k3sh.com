@@ -2,8 +2,12 @@ import React, { Component } from 'react'
 import './aboutme.css';
 import hoverEffect from 'hover-effect'
 import $ from 'jquery'
+import {
+    Link
+} from "react-router-dom";
 import Skills from './Components/Skills'
 let imageUrl1, imageUrl2
+
 let url="./images/alphabets"
 let letters = {
     'first': [`${url}/r.png`, `${url}/i.png`, `${url}/k.png`, `${url}/e.png`, `${url}/s.png`, `${url}/h.png`],
@@ -71,7 +75,7 @@ export default class Aboutme extends Component {
             $('.medium-container2').css({ 'animation': 'aboutloading 0.4s linear forwards', 'animation-delay': '1.6s' })
             $('.medium-container1').css({ 'animation': 'aboutloading 0.4s linear forwards', 'animation-delay': '1.8s' })
             $('.big-container').css({ 'animation': 'aboutloading 0.4s linear forwards', 'animation-delay': '2s' })
-        },3000)
+        },100)
         
     }
     componentDidMount(){
@@ -93,15 +97,7 @@ export default class Aboutme extends Component {
         this.aboutHoverEffect();
         $('.next').click(_=>{
             $('.about-container1').slideUp()
-            setTimeout(_=>{
-                 $('.about .skill-container').fadeIn()
-                $('.about .skill-container').css({'display':'grid'})
-                $('.about .skill-container .skill-left').css({'animation':'nextloading 2s ease-in forwards'})
-                that.setState({
-                    intro:'My Skills',
-                    next:'contact me'
-                })
-            },800)
+            $('.skill-container').fadeIn('slow')
         })
 
     }
@@ -117,6 +113,7 @@ export default class Aboutme extends Component {
             '2019':'Working as a Front-end Developer'
             
         }
+   
         $('.year').hover(_ => {
            console.log()
             // setTimeout((x)=>{
@@ -270,30 +267,9 @@ export default class Aboutme extends Component {
                         </div>
                     </div>
                 </div>
-                <div className="skill-container">
-                    <div className="skill-left">
-                        <svg  viewBox="0 0 240 225">
-                            <path fill="#EEEBE4">
-                                <animate
-                                    attributeName="d"
-                                    dur="8s"
-                                    repeatCount="indefinite"
-                                    values="M123.63,4.78C58.88,12.27,34.28-11.9,13.02,15.7C-4.75,38.48-14.32,153.77,63.69,188.97
-                                    c68.24,30.8,138.63-9.43,172.27-78.99C255.75,69.05,193.75-5.76,123.63,4.78z;M123.63,4.78C41.5,14.05,29.65-14.91,13.02,15.7C-7,52.55-6.32,204.81,63.69,188.97c74.81-16.92,143.01-7.48,172.27-78.99C252.5,69.55,212.5-8.45,123.63,4.78z;
-                                M123.63,4.78C41.5,14.05,16.11-16.94,13.02,15.7C3,121.55,0.78,223.54,63.69,188.97c86.31-47.42,155.03-3.67,172.27-78.99C247.5,59.55,219.5-17.95,123.63,4.78z;M123.63,4.78C41.5,14.05,29.65-14.91,13.02,15.7C-7,52.55-6.32,204.81,63.69,188.97c74.81-16.92,143.01-7.48,172.27-78.99C252.5,69.55,212.5-8.45,123.63,4.78z;	
-                                            M123.63,4.78C58.88,12.27,34.28-11.9,13.02,15.7C-4.75,38.48-14.32,153.77,63.69,188.97c68.24,30.8,138.63-9.43,172.27-78.99C255.75,69.05,193.75-5.76,123.63,4.78z;">
-                                </animate> 
-                            </path>
-                    </svg>
-                        <img src="./images/about.png" alt='..'></img>
-                    </div>
-                    <div className="skill-right">
-                        <div className="divider"></div>  
-                          <Skills></Skills>
-                    </div>                   
-                </div>
+                
                 <div className='next'>
-                    <span>{this.state.next}</span>
+                    <Link to='/skill' id="skill"><span>{this.state.next}</span></Link>
                 </div>
             </div>
         )

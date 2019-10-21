@@ -10,6 +10,7 @@ import Contactme from './Contactme'
 import NavBar from './Components/navBar'
 import { HashRouter as Router, Route } from 'react-router-dom'
 import $ from 'jquery'
+import Skills from './Components/Skills';
 
 function Scene() {
   const [page, setPage] = useState(0)
@@ -72,7 +73,7 @@ class App extends React.Component{
         loaderIsHidden:false
       })
       $('.bear').fadeOut()
-    },5000)
+    },2000)
   }
   render(){
  
@@ -97,6 +98,7 @@ class App extends React.Component{
             <Route exact path='/' component={Homepage}/>
             <Route path='/contact' component={Contactme}/>
             <Route path='/about' component={Aboutme} />
+            <Route path='/skill' component={Skills}/>
           </Router>
         </div>
     

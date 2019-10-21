@@ -13,7 +13,7 @@ export default class NavBar extends Component {
             document.querySelector('#home'),
             document.querySelector('#contact'),
             document.querySelector('#about'),
-          
+            document.querySelector('#skill')
         ];
 
         let activeIndex;
@@ -82,9 +82,9 @@ export default class NavBar extends Component {
                     <Link to='/contact' id="contact">
                         <h2>Contact Me</h2>
                     </Link> 
-                    {/* <Link to='/test' id="test">
-                        <h2>Test</h2>
-                    </Link> */}
+                    <Link to='/skill' id="skill">
+                        <h2>Skills</h2>
+                    </Link>
                 </nav>
                 <div id="hamburgerMenu">
                     <h2>menu</h2>

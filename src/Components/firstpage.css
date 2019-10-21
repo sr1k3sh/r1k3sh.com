@@ -29,12 +29,18 @@
     position: relative;
  }
  .weather{
+     display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
      backdrop-filter: blur(20px);
     background: #faebd75c;
     /* border-radius: 12px; */
     padding:10px;
     animation: loading 1s ease-in-out forwards;
      grid-column:1;
+     width:220px;
    
  }
  .weather span{
@@ -129,7 +135,34 @@ animation: loading 1s ease-in-out forwards;
     box-shadow: inset -2px 0 0 3px #cb876c;
   }
 }
-@media (max-width:1307px){
+@media(max-width:768px){
+    .weather{
+       display: none;
+    }
+    .main .welcome-text .slogan h1{
+        font-size:4.5rem;
+    }
+    .main .home-page-container .home-page-left{
+        grid-gap:0;
+    }
+    .main .welcome-text p {
+        /* opacity: 0; */
+        font-weight: 100;
+        /* float: right; */
+        text-align: center;
+    }
+    .main .home-page-container {
+        display: block;
+    }
+    .main .welcome-text {
+        position: absolute;
+    }
+    .main .home-page-container .main-image {
+        grid-column: 2;
+        opacity: 0.4;
+    }
+}
+@media only screen and (max-width:1307px){
     .main .home-page-container {
    
     grid-template-columns: 1fr;
@@ -137,18 +170,19 @@ animation: loading 1s ease-in-out forwards;
 }
 
 }
-@media(max-height:734px){
+@media(max-height:734px) and (min-width:1307px) {
     .main .welcome-text .slogan h1{
      font-size:6.5rem;
     }
 }
-@media(max-height:638px){
+@media(max-height:638px)and (min-width:1307px){
     .main .welcome-text .slogan h1{
      font-size:5.5rem;
     }
 }
-@media(max-height:540px){
+@media(max-height:540px)and (min-width:1307px){
     .main .welcome-text .slogan h1{
      font-size:4.5rem;
     }
 }
+

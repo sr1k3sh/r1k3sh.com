@@ -161,7 +161,7 @@ export default class FirstPage extends Component {
       <div className="home-page-container">
         <div className="home-page-left">
         
-          <div className="weather" style={{display:'flex',flexDirection:'column',justifyContent:'center',alignItems:'center',height:'100vh',width:'220px'}}>
+          <div className="weather">
            
             {this.loadResourse()}
           </div>

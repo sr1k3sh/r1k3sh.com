@@ -117,12 +117,16 @@ nav a.active::after{
         right: 10%;
         top: -10%;
         animation: rot 2s linear infinite;
-    transform-origin: 49% 45%;
+    transform-origin: 42% 42%;
     }
 }
 @media only screen and (max-width: 1366px) {
 nav a{
         font-size: 11px;
         margin-bottom:20px;
+    }
+    #hamburgerMenu h2{
+        font-size: 21px;
+        right:-23px;
     }
 }

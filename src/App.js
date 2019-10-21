@@ -8,7 +8,7 @@ import Homepage from './Homepage';
 import Aboutme from './Aboutme'
 import Contactme from './Contactme'
 import NavBar from './Components/navBar'
-import { BrowserRouter as Router, Route } from 'react-router-dom'
+import { HashRouter as Router, Route } from 'react-router-dom'
 import $ from 'jquery'
 
 function Scene() {

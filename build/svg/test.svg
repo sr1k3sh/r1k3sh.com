@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1535" height="775" viewBox="0 0 1535    775">
+                            <defs> 
+                                                    
+                                <linearGradient id="linear-gradient" x1="1" y1="0.462" x2="0.5" y2="1" gradientUnits="objectBoundingBox">
+                                    <stop offset="0" stop-color="#371c1c" />
+                                    <stop offset="1" stop-opacity="0.69" />
+                                </linearGradient>
+                                <filter id="Rectangle_1" x="0" y="354.485" width="1656.001" height="122" filterUnits="userSpaceOnUse">
+                                    <feOffset dy="15" input="SourceAlpha" />
+                                    <feGaussianBlur stdDeviation="20" result="blur" />
+                                    <feFlood flood-opacity="0.161" />
+                                    <feComposite operator="in" in2="blur" />
+                                    <feComposite in="SourceGraphic" />
+                                </filter>
+                                <linearGradient id="linear-gradient-2" x1="0.5" x2="0.5" y2="1" gradientUnits="objectBoundingBox">
+                                    <stop offset="0" stop-color="#ff4145" />
+                                    <stop offset="1" stop-color="#ff8284" stop-opacity="0.4" />
+                                </linearGradient>
+                                <linearGradient id="linear-gradient-3" x1="0.5" x2="0.5" y2="1" gradientUnits="objectBoundingBox">
+                                    <stop offset="0" stop-color="#fed6e3" />
+                                    {/* <stop offset="0.64" stop-color="#cca3fb" stop-opacity="0.784" /> */}
+                                    <stop offset="1" stop-color="#ace0f9" stop-opacity="0.5"/>
+                                </linearGradient>
+                                {/* background-image: linear-gradient(to top, #dad4ec 0%, #dad4ec 1%, #f3e7e9 100%); */}
+                        </defs>
+                            <g id="ellipse1">
+
+                                <circle id="Ellipse_1" data-name="Ellipse 1" class="cls-3" cx="350" cy="350" r="350" />
+
+                            </g>
+                            <g id="ellipse2">
+                                <circle id="Ellipse_2" data-name="Ellipse 2" class="cls-4" cx="350" cy="350" r="350" />
+                            </g> 
+                        <g id="Group_1" data-name="Group 1">
+                           
+                            <g>
+                                <text className="contact-header">
+                                        <tspan>R</tspan>
+                                        <tspan>1</tspan>
+                                        <tspan>k</tspan>
+                                        <tspan>3</tspan>
+                                        <tspan>s</tspan>
+                                        <tspan>h</tspan>
+
+                                </text>
+                            </g>
+                            
+                        </g>
+                        
+                    </svg>

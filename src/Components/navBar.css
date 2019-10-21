@@ -120,58 +120,9 @@ nav a.active::after{
     transform-origin: 49% 45%;
     }
 }
-/* nav a {
-    height: 3em;
-    min-width: 3em;
-    width: 3em;
-    margin: 0 1em;
-    animation: all 0.5s;
-    position: relative;
+@media only screen and (max-width: 1366px) {
+nav a{
+        font-size: 11px;
+        margin-bottom:20px;
+    }
 }
-
-nav a div {
-    position: absolute;
-    width: 3em;
-    height: 100%;
-    z-index: 3;
-    background-color: #abc;
-    color: transparent;
-    border-radius: 1.5em;
-    line-height: 3em;
-    text-align: center;
-    transition: all 0.5s;
-    cursor: pointer;
-}
-
-nav a:hover::after {
-    top: -0.5em;
-    left: -0.5em;
-    height: calc(100% + 1em);
-    width: calc(100% + 1em);
-    transition: all 0.5s;
-}
-
-nav a::after {
-    content: "";
-    position: absolute;
-    height: 100%;
-    width: 100%;
-    border-radius: 1.5em;
-    background-color: #345;
-    top: 0.5em;
-    left: 0.5em;
-    transition: all 0.5s;
-}
-
-nav a.active {
-    min-width: 9em;
-    width: 9em;
-    transition: all 0.5s;
-}
-
-nav a.active div {
-    color: #123;
-    width: 9em;
-    background-color: #cde;
-    transition: all 0.5s;
-} */

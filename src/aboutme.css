@@ -31,6 +31,7 @@
     grid-template-columns: 1fr 1fr 1fr;
     transform: rotate(45deg)
 }
+
 .about .about-container1 .big-container{
     background:#000;
     grid-row: 1/3;
@@ -253,4 +254,35 @@
     
     border-top:2px solid #fff;
     border-right:2px solid #fff;
+}
+
+
+@media only screen and (max-width:1366px){
+    .about .about-container1{
+         transform:scale(0.8) rotate(45deg)
+    }
+    .about .intro {
+    position: absolute;
+    top: 3%;
+}
+.about .next {
+    position: absolute;
+    bottom: 3%;
+    z-index: 11;
+}
+    .skills{
+        margin-top:0;
+        transform:scale(0.8);
+    }
+    .skill-left svg{
+        width:520px;
+    }
+    .about .skill-container .skill-left img {
+    /* width: 600px; */
+    /* height: 600px; */
+    width:500px;
+    object-fit: contain;
+    position: absolute;
+    z-index: 2;
+}
 }

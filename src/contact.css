@@ -409,3 +409,16 @@ opacity: 0;
     opacity: 1;
   }
 }
+#ellipse1,#ellipse2{
+    width:600px;
+    height:600px;
+}
+@media only screen and (max-width: 1366px) {
+    #ellipse1,#ellipse2{
+        width:430px;
+        height:430px;
+    }
+    span{
+        line-height: 0;
+    }
+}

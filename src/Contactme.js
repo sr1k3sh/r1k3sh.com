@@ -104,8 +104,8 @@ export default class Contactme extends Component {
             <div id="contact" className="contact-page">
                 <div className="contact-box">
                      <div className='cls-6 middle-line'></div>
-                     <div id="ellipse1" style={{width:'600px',height:'600px',borderRadius:'50%'}}></div>
-                     <div id="ellipse2" style={{ width: '600px', height: '600px', borderRadius: '50%' }}>
+                     <div id="ellipse1" style={{borderRadius:'50%'}}></div>
+                     <div id="ellipse2" style={{borderRadius: '50%' }}>
                          <img className="profile-picture" style={{width:'100%',objectFit:'cover',height:'100%',borderRadius:'10%'}} alt="personal infos" src="./images/profile.jpg"></img>
                          <h3><span>Rikesh</span> <span style={{ color:'#373737'}}>Shrestha</span></h3>                         
                             <div className="slider">

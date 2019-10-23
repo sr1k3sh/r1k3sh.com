@@ -45,7 +45,7 @@ class App extends React.Component{
     this.loaderIsHidden=this.loaderIsHidden.bind(this)
   }
   componentDidMount(){
-    this.loaderIsHidden()
+    // this.loaderIsHidden()
     
   }
   loaderIsHidden(){
@@ -77,11 +77,11 @@ class App extends React.Component{
   }
   render(){
  
-    if(this.state.loaderIsHidden){
-      return <div style={{position:'absolute',left:'45%',top:'30%'}}>
-        <img className='bear' style={{ width: '100%' }} src={`./loader/panda${this.state.src}.svg`} alt='loader'></img>
-      </div>
-    }
+    // if(this.state.loaderIsHidden){
+    //   return <div style={{position:'absolute',left:'45%',top:'30%'}}>
+    //     <img className='bear' style={{ width: '100%' }} src={`./loader/panda${this.state.src}.svg`} alt='loader'></img>
+    //   </div>
+    // }
     
     return(
       

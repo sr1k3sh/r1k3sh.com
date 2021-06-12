@@ -5,7 +5,6 @@ import $ from 'jquery'
 import {
     Link
 } from "react-router-dom";
-import Skills from './Components/Skills'
 let imageUrl1, imageUrl2
 
 let url="./images/alphabets"
@@ -25,13 +24,13 @@ export default class Aboutme extends Component {
            timeLine:'HELLO',
             next:'Do you want to know about my Skills'
         }
-      
+
     }
     componentWillMount(){
-       
+
         imageUrl1 = "https://upload.wikimedia.org/wikipedia/commons/3/30/Echo_Park_Lake_with_Downtown_Los_Angeles_Skyline.jpg"
         imageUrl2 = "https://images.unsplash.com/photo-1440330033336-7dcff4630cef?ixlib=rb-1.2.1&auto=format&fit=crop&w=1342&q=80"
-       
+
         let that = this
 
         $.ajax({
@@ -54,9 +53,9 @@ export default class Aboutme extends Component {
         })
     }
     time=()=>{
-        
+
             // console.log(this.state.value)
-           
+
             if(!this.state.isLoaded)
             return <h1>loading</h1>
             else
@@ -65,8 +64,8 @@ export default class Aboutme extends Component {
     boxComponent=()=>{
 
         setTimeout(_=>{
-            $('.tiny-1 .t1').css({ 'animation': 'aboutloading 0.4s linear 0.2s forwards' })  
-            $('.tiny-1 .t2').css({ 'animation': 'aboutloading 0.4s linear 0.4s forwards' })            
+            $('.tiny-1 .t1').css({ 'animation': 'aboutloading 0.4s linear 0.2s forwards' })
+            $('.tiny-1 .t2').css({ 'animation': 'aboutloading 0.4s linear 0.4s forwards' })
             $('.small-container').css({'animation':'aboutloading 0.4s linear 0.6s forwards'})
             $('.small-container .small-1').css({ 'animation': 'aboutloading 0.4s linear forwards','animation-delay':'0.8s' })
             $('.small-container .small-2').css({ 'animation': 'aboutloading 0.4s linear forwards', 'animation-delay': '1s' })
@@ -76,11 +75,11 @@ export default class Aboutme extends Component {
             $('.medium-container1').css({ 'animation': 'aboutloading 0.4s linear forwards', 'animation-delay': '1.8s' })
             $('.big-container').css({ 'animation': 'aboutloading 0.4s linear forwards', 'animation-delay': '2s' })
         },100)
-        
+
     }
     componentDidMount(){
         this.boxComponent()
-        $('.intro').css('animation','unloading 2s linear reverse forwards')         
+        $('.intro').css('animation','unloading 2s linear reverse forwards')
         setTimeout(_=>{
             new hoverEffect({
                 parent: document.querySelector('.about .big-container'),
@@ -92,8 +91,7 @@ export default class Aboutme extends Component {
                 displacementImage: 'https://raw.githubusercontent.com/DomyS/Liquid-Image-Transition/master/heightMap.png'
             })
 
-        },1000)     
-        let that = this;
+        },1000)
         this.aboutHoverEffect();
         $('.next').click(_=>{
             $('.about-container1').slideUp()
@@ -111,27 +109,27 @@ export default class Aboutme extends Component {
             '2016':'yeahhhh.. Er Rikesh Shrestha',
             '2017':'Worked as Software Engineer',
             '2019':'Working as a Front-end Developer'
-            
+
         }
-   
+
         $('.year').hover(_ => {
            console.log()
             // setTimeout((x)=>{
             //     // $('#timeline-text-' + _.target.dataset.year).css({display:'flex'})
             //     // $('#timeline-text-'+_.target.dataset.year).fadeIn()
             // },200)
-            
+
                 this.setState({
-                    timeLine: date[_.target.dataset.year]  
+                    timeLine: date[_.target.dataset.year]
                 })
 
-            
+
             $('#timeline-text').css({ 'animation': 'loading 0.8s linear forwards'});
             $('.container-details').css({ 'background': '#f0f8ff40', 'backdrop-filter': 'blur(20px)' })
         }, _ => {
             $('#timeline-text').css({ 'animation': 'unloading 0.8s linear forwards' });
             $('.container-details').css({ 'background': 'transparent', 'backdrop-filter': 'blur(2px)' })
-        })  
+        })
     }
     hoverEffect(){
         var container = document.getElementById('about-con')
@@ -217,7 +215,7 @@ export default class Aboutme extends Component {
         container.onmouseleave = onMouseLeaveHandler;
         container.onmousemove = onMouseMoveHandler;
     }
-    slidupText=(item)=>{    
+    slidupText=(item)=>{
         letters[item].forEach((item, index) => {
             $('#wrapper span').append(`<img id="l${index}" src="${item}"/>`)
         })
@@ -225,7 +223,7 @@ export default class Aboutme extends Component {
     render() {
         return (
             <div className="about" id="about-con">
-              
+
                 <div className="intro">
                     <h1 style={{fontWeight:'100',fontSize:'20px'}}>{this.state.intro}</h1>
                 </div>
@@ -242,7 +240,7 @@ export default class Aboutme extends Component {
                     </div>
                     <div className="big-container">
                         <div className="container-details">
-                         
+
                             <h1 id="timeline-text">{this.state.timeLine}</h1>
 
                         </div>
@@ -267,7 +265,7 @@ export default class Aboutme extends Component {
                         </div>
                     </div>
                 </div>
-                
+
                 <div className='next'>
                     <Link to='/skill' id="skill"><span>{this.state.next}</span></Link>
                 </div>
